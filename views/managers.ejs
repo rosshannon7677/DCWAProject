@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managers Page</title>
+</head>
+<body>
+    <h1>Managers Page</h1>
+    <a href="/managers/add">Add Manager</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% managers.forEach(manager => { %>
+                <tr>
+                    <td><%= manager._id%></td>
+                    <td><%= manager.name %></td>
+                    <td><%= manager.salary %></td>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/">Home</a>
+    
+</body>
+</html>

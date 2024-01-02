@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Description</th>
+                <th>Store ID</th>
+                <th>Location</th>
+                <th>Price</th>               
+            </tr>
+        </thead>
+        <tbody>
+            <% Users.forEach((Users) => { %>
+                <tr>
+                    <td><%= Users.pid%></td>
+                    <td><%= Users.productdesc%></td>
+                    <td><%= Users.sid%></td>
+                    <td><%= Users.location%></td>
+                    <td><%= Users.Price%></td>
+                    <td>
+                        <a href="/products/delete/<%= Users.pid %>" >Delete <%= Users.productdesc %></a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>
